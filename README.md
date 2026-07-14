@@ -27,43 +27,41 @@ Anschließend werden die aufbereiteten Daten mit einem **Power BI Dashboard** vi
 # 🏗️ Projektarchitektur
 
 
+```text
 GitHub
 (sales.csv)
-|
-v
+      |
+      v
 Microsoft Fabric Pipeline
-|
-v
+      |
+      v
 Bronze Layer
 (sales_bronze)
 (Rohdaten)
-|
-v
+      |
+      v
 Silver Layer
 (sales_silver)
-(Datenbereinigung & Transformation)
-|
-v
+(Datenbereinigung)
+      |
+      v
 PySpark Notebook
-|
-v
+      |
+      v
 Gold Layer
-(Business Data Model)
 
-fact_sales
-product_summary
-customer_summary
+- fact_sales
+- product_summary
+- customer_summary
+- date_dim
 
-date_dim
-
-|
-v
-
+      |
+      v
 Fabric Semantic Model
-|
-v
+      |
+      v
 Power BI Dashboard
-
+```
 
 ---
 
