@@ -153,26 +153,28 @@ Enthält:
 
 # 📸 Screenshots
 
-## Pipeline
+## 🔄 Microsoft Fabric Pipeline
 
-![pipeline](Screenshot 2026-07-14 171349.png)
+![Microsoft Fabric Pipeline](pipeline/pipeline.png)
 
+---
 
-## Sales Dashboard
+## 📈 Sales Dashboard
 
 ![Sales Dashboard](powerbi/sales_dashboard.png)
 
+---
 
-## Product Analysis
+## 📦 Product Analysis
 
 ![Product Analysis](powerbi/product_analysis.png)
 
+---
 
-## Customer Analysis
+## 👥 Customer Analysis
 
 ![Customer Analysis](powerbi/customer_analysis.png)
 
----
 
 # 📂 Repository Structure
 
