@@ -224,26 +224,25 @@ Das Dashboard ermöglicht die Analyse von:
 # 📂 Repository Struktur
 
 
+```text
 Sales-Analytics-Fabric
 
 │
 ├── sales.csv
 │
 ├── pipeline
-│ └── pipeline.png
+│   └── pipeline.png
 │
 ├── notebook
-│ └── Gold_Notebook.ipynb
+│   └── Gold_Notebook.ipynb
 │
 ├── powerbi
-│ ├── sales_dashboard.png
-│ ├── product_analysis.png
-│ └── customer_analysis.png
+│   ├── sales_dashboard.png
+│   ├── product_analysis.png
+│   └── customer_analysis.png
 │
 └── README.md
-
-
----
+```
 
 # 🚀 Projektergebnisse
 
