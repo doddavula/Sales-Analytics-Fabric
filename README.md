@@ -1,148 +1,127 @@
-# 📊 Sales Analytics Project – Microsoft Fabric
+# 📊 Sales Analytics Project - Microsoft Fabric
 
-![Microsoft Fabric](https://img.shields.io/badge/Microsoft%20Fabric-Data%20Analytics-blue)
-![Power BI](https://img.shields.io/badge/Power%20BI-Dashboard-yellow)
-![PySpark](https://img.shields.io/badge/PySpark-Data%20Transformation-orange)
-![GitHub](https://img.shields.io/badge/GitHub-Portfolio-black)
+## 📌 Project Overview
 
-## 📌 Projektübersicht
+This project demonstrates an end-to-end **Sales Analytics solution** using **Microsoft Fabric**.
 
-Dieses Projekt zeigt eine vollständige **End-to-End Sales Analytics Lösung** mit **Microsoft Fabric**.
-
-Die Verkaufsdaten werden aus einer CSV-Datei geladen, mit einer automatisierten Pipeline verarbeitet, in der Medallion-Architektur transformiert und anschließend mit Power BI visualisiert.
-
-Das Projekt demonstriert Data Engineering und Business Intelligence Prozesse von der Datenaufnahme bis zum Dashboard.
+The sales data is loaded from a CSV file, processed through a Medallion Architecture (Bronze, Silver, Gold), and visualized using Power BI dashboards.
 
 ---
 
-# 🏗️ Architektur
+## 🛠️ Technologies Used
 
-```mermaid
-flowchart TD
+- Microsoft Fabric
+- OneLake
+- Data Pipeline
+- Dataflow Gen2
+- PySpark Notebook
+- Delta Lake
+- Semantic Model
+- Power BI
+- GitHub
 
-A[📁 GitHub<br/>sales.csv] --> B[🔄 Microsoft Fabric Pipeline]
+---
 
-B --> C[🥉 Bronze Layer<br/>sales_bronze]
+## 🏗️ Architecture
 
-C --> D[🥈 Silver Layer<br/>sales_silver<br/>Cleaning & Transformation]
-
-D --> E[🐍 PySpark Notebook]
-
-E --> F[🥇 Gold Layer]
-
-F --> G[fact_sales]
-F --> H[product_summary]
-F --> I[customer_summary]
-F --> J[date_dim]
-
-G --> K[📊 Semantic Model]
-H --> K
-I --> K
-J --> K
-
-K --> L[📈 Power BI Dashboard]
-
-L --> M[Sales Overview]
-L --> N[Product Analysis]
-L --> O[Customer Analysis]
+```
+GitHub (sales.csv)
+        |
+        v
+Microsoft Fabric Pipeline
+        |
+        v
+Bronze Layer
+(sales_bronze)
+        |
+        v
+Silver Layer
+(sales_silver)
+(Data Cleaning & Transformation)
+        |
+        v
+PySpark Notebook
+        |
+        v
+Gold Layer
+        |
+        +----------------+
+        |                |
+   fact_sales     product_summary
+        |
+   customer_summary
+        |
+      date_dim
+        |
+        v
+Fabric Semantic Model
+        |
+        v
+Power BI Dashboard
 ```
 
 ---
 
-# 🛠️ Technologien
+## 🔄 Data Processing
 
-| Technologie | Verwendung |
-|---|---|
-| Microsoft Fabric | Cloud Data Platform |
-| OneLake | Datenspeicherung |
-| Data Pipeline | Datenintegration |
-| Dataflow Gen2 | Datenbereinigung |
-| PySpark | Transformation |
-| Delta Lake | Tabellenverwaltung |
-| Semantic Model | Datenmodellierung |
-| Power BI | Dashboard & Reporting |
-| GitHub | Versionskontrolle |
+### Bronze Layer
 
----
+- Loaded raw sales CSV data into Fabric Lakehouse
+- Stored original source data
 
-# 🔄 Datenprozess (ETL)
+### Silver Layer
 
-## 🥉 Bronze Layer
+Data cleaning steps:
 
-**sales_bronze**
+- Checked null values
+- Removed duplicates
+- Changed data types
+- Created SalesAmount column
 
-- Laden der Rohdaten aus GitHub CSV
-- Speicherung der Originaldaten
+### Gold Layer
 
----
+Created analytical tables:
 
-## 🥈 Silver Layer
+**fact_sales**
+- Sales transactions
+- Quantity
+- Revenue
 
-**sales_silver**
+**product_summary**
+- Sales by product
+- Product performance
 
-Durchgeführte Transformationen:
+**customer_summary**
+- Customer revenue
+- Customer orders
 
-✅ Prüfung auf Nullwerte  
-✅ Entfernung von Duplikaten  
-✅ Anpassung der Datentypen  
-✅ Berechnung der Spalte `SalesAmount`
-
----
-
-## 🥇 Gold Layer
-
-Erstellung von Business-optimierten Tabellen:
-
-### fact_sales
-- Verkaufsdetails
-- Umsatz
-- Menge
-- Produktinformationen
-
-### product_summary
-- Umsatz je Produkt
-- Verkaufte Mengen
-
-### customer_summary
-- Umsatz je Kunde
-- Anzahl Bestellungen
-
-### date_dim
-- Jahr
-- Quartal
-- Monat
-- Zeitanalysen
+**date_dim**
+- Year
+- Quarter
+- Month analysis
 
 ---
 
-# 📊 Power BI Dashboard
+## 📈 Power BI Dashboard
 
-Das Dashboard besteht aus drei Seiten:
+The dashboard contains three pages:
 
-## 1️⃣ Sales Overview
-
-Enthält:
+### 1. Sales Overview
 
 - Total Revenue
 - Total Orders
 - Total Quantity
-- Sales Trend nach Monat
-- Sales nach Produkt
+- Sales Trend by Month
+- Sales by Product
 
-
-## 2️⃣ Product Analysis
-
-Enthält:
+### 2. Product Analysis
 
 - Total Revenue
 - Total Products
 - Top Products by Revenue
 - Quantity Sold by Product
 
-
-## 3️⃣ Customer Analysis
-
-Enthält:
+### 3. Customer Analysis
 
 - Total Customers
 - Customer Revenue
@@ -151,66 +130,64 @@ Enthält:
 
 ---
 
-# 📸 Screenshots
+## 📸 Screenshots
 
-## 🔄 Microsoft Fabric Pipeline
+### Microsoft Fabric Pipeline
 
-![Microsoft Fabric Pipeline](pipeline/pipeline.png)
+![Pipeline](pipeline/pipeline.png)
 
----
 
-## 📈 Sales Dashboard
+### Sales Dashboard
 
 ![Sales Dashboard](powerbi/sales_dashboard.png)
 
----
 
-## 📦 Product Analysis
+### Product Analysis
 
 ![Product Analysis](powerbi/product_analysis.png)
 
----
 
-## 👥 Customer Analysis
+### Customer Analysis
 
 ![Customer Analysis](powerbi/customer_analysis.png)
 
+---
 
-# 📂 Repository Structure
+## 📂 Repository Structure
 
 ```
 Sales-Analytics-Fabric
-│
-├── sales.csv
-│
-├── pipeline
-│   └── pipeline.png
-│
-├── notebook
-│   └── Gold_Notebook.ipynb
-│
-├── powerbi
-│   ├── sales_dashboard.png
-│   ├── product_analysis.png
-│   └── customer_analysis.png
-│
-└── README.md
+|
+|-- sales.csv
+|
+|-- pipeline
+|   |-- pipeline.png
+|
+|-- notebook
+|   |-- Gold_Notebook.ipynb
+|
+|-- powerbi
+|   |-- sales_dashboard.png
+|   |-- product_analysis.png
+|   |-- customer_analysis.png
+|
+|-- README.md
 ```
 
 ---
 
-# 🚀 Projektergebnisse
+## 🚀 Project Highlights
 
-✅ End-to-End Datenpipeline  
-✅ Medallion Architektur (Bronze/Silver/Gold)  
-✅ Datenbereinigung mit Fabric  
-✅ Transformation mit PySpark  
-✅ Star Schema Datenmodell  
-✅ Interaktives Power BI Dashboard  
+✅ End-to-end ETL pipeline  
+✅ Medallion Architecture (Bronze/Silver/Gold)  
+✅ Data cleaning and transformation  
+✅ PySpark data processing  
+✅ Data modeling with Semantic Model  
+✅ Interactive Power BI dashboards  
 
 ---
 
-# 👩‍💻 Autor
+## 👩‍💻 Author
 
 **Anitha Doddavula**
 
