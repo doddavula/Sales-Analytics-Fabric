@@ -155,7 +155,7 @@ Enthält:
 
 ## Pipeline
 
-![Fabric Pipeline](pipeline/pipeline.png)
+![pipeline](Screenshot 2026-07-14 171349.png)
 
 
 ## Sales Dashboard
