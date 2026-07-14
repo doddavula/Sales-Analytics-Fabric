@@ -1,6 +1,6 @@
-# 📊 Sales Analytics Projekt – Microsoft Fabric
+#  Sales Analytics Projekt – Microsoft Fabric
 
-## 📌 Projektübersicht
+##  Projektübersicht
 
 Dieses Projekt zeigt eine vollständige **End-to-End Sales Analytics Lösung mit Microsoft Fabric**.
 
@@ -10,7 +10,7 @@ Anschließend werden die aufbereiteten Daten mit einem **Power BI Dashboard** vi
 
 ---
 
-# 🛠️ Verwendete Technologien
+#  Verwendete Technologien
 
 - Microsoft Fabric
 - OneLake
@@ -24,7 +24,7 @@ Anschließend werden die aufbereiteten Daten mit einem **Power BI Dashboard** vi
 
 ---
 
-# 🏗️ Projektarchitektur
+#  Projektarchitektur
 
 
 ```text
@@ -65,9 +65,9 @@ Power BI Dashboard
 
 ---
 
-# 🔄 Datenverarbeitung (ETL-Prozess)
+#  Datenverarbeitung (ETL-Prozess)
 
-## 🥉 Bronze Layer
+##  Bronze Layer
 
 ### Tätigkeiten:
 
@@ -82,7 +82,7 @@ sales_bronze
 
 ---
 
-## 🥈 Silver Layer
+##  Silver Layer
 
 ### Durchgeführte Transformationen:
 
@@ -100,7 +100,7 @@ sales_silver
 
 ---
 
-## 🥇 Gold Layer (Business Data Model)
+##  Gold Layer (Business Data Model)
 
 Erstellung von Business-Tabellen für Reporting und Analyse:
 
@@ -145,7 +145,7 @@ Enthält:
 
 ---
 
-# 📈 Power BI Dashboard
+#  Power BI Dashboard
 
 Das Dashboard besteht aus drei Seiten:
 
@@ -183,7 +183,7 @@ Enthält:
 
 ---
 
-# 📸 Screenshots
+#  Screenshots
 
 ## Microsoft Fabric Pipeline
 
@@ -209,7 +209,7 @@ Enthält:
 
 ---
 
-# 💡 Business Insights
+#  Business Insights
 
 Das Dashboard ermöglicht die Analyse von:
 
@@ -221,7 +221,7 @@ Das Dashboard ermöglicht die Analyse von:
 
 ---
 
-# 📂 Repository Struktur
+#  Repository Struktur
 
 
 ```text
@@ -244,7 +244,7 @@ Sales-Analytics-Fabric
 └── README.md
 ```
 
-# 🚀 Projektergebnisse
+#  Projektergebnisse
 
 ✅ Aufbau einer End-to-End Datenpipeline  
 ✅ Nutzung der Medallion-Architektur (Bronze, Silver, Gold)  
@@ -256,7 +256,7 @@ Sales-Analytics-Fabric
 
 ---
 
-# 👩‍💻 Autor
+#  Autor
 
 **Anitha Doddavula**
 
